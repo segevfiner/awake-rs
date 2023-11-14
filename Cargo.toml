@@ -18,7 +18,7 @@ bin = ["dep:clap", "dep:clap_complete", "dep:ctrlc", "dep:shadow-rs", "dep:sysin
 lto = "thin"
 strip = true
 debug = true
-split-debuginfo = "unpacked"
+split-debuginfo = "packed"
 
 [[bin]]
 name = "keepawake"
