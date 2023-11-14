@@ -15,8 +15,9 @@ exclude = ["/tools/"]
 bin = ["dep:clap", "dep:clap_complete", "dep:ctrlc", "dep:shadow-rs", "dep:sysinfo"]
 
 [profile.release]
-strip = true
 lto = "thin"
+strip = true
+split-debuginfo = "packed"
 
 [[bin]]
 name = "keepawake"

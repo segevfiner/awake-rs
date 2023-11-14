@@ -4,7 +4,7 @@ on:
   workflow_dispatch: {}
   push:
     tags:
-      - v[0-9].*
+      - v[0-9]*
 
 jobs:
   release:
@@ -60,7 +60,7 @@ jobs:
 
       - name: Release
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
+        if: github.ref_type == 'tag'
         with:
           draft: true
           files: ${{ env.ASSET }}
